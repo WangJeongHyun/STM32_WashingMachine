@@ -93,7 +93,48 @@ unsigned int happy_birthday[] =
      htim5.Instance->CCR1=0;
      HAL_Delay(50);
  }
+ void Buzzer_Turn_On(void)
+ {
+   return __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, 200);
+ }
+ 
+ void Buzzer_Turn_Off(void)
+ {
+   return __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, 0);
+ }
+ 
+ // 완료 알림
+ void Mode_Complete_Alarm(void)
+ {
+   static uint32_t i = 0;
+   int divide_freq = 1600000;
+ 
+   if (mode_complete_alarm_stop_start_flag == START)
+   {
+     Buzzer_Turn_On();
+     __HAL_TIM_SET_AUTORELOAD(&htim9, divide_freq / mode_complete_note[i]);
+ 
+     if (TIM10_10ms_WM_buzzer_timer > 20 * mode_complete_rythm[i])
+     {
+       TIM10_10ms_WM_buzzer_timer = 0;
+       i++;
+     }
+ 
+     if (i >= sizeof(mode_complete_note)/sizeof(uint32_t))
+     {
+       i = 0;
+       mode_complete_alarm_stop_start_flag = STOP;
+       Buzzer_Turn_Off();
+     }
+   }
+   else
+   {
+     i = 0;
+     Buzzer_Turn_Off();
+   }
+ }
 
+ //test
 void buzzer_main()
 {
    int divide_freq = 1600000;
