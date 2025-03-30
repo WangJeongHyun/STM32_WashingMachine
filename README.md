@@ -68,12 +68,3 @@ Motor Driver를 통한 DC Motor 제어로 Mode 별 동작 알고리즘 분기
 <br>
 
 ---------------------------------------
-
-## 검증
-### 스코프와 로직분석기를 통한 데이터 검증
-![image](https://github.com/user-attachments/assets/039a4b6e-5edb-4f8f-876e-159ee6bed3dd)
-
-![image](https://github.com/user-attachments/assets/54c102a3-eced-4ec3-aead-9c9d7e2ff5b7)
-
-
-<br>
