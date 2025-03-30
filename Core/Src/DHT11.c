@@ -27,6 +27,7 @@ printf("DHT11_Init()\n");
 
 	while(1)
 	{
+		//DHT11과 MCU의 Hand-shaking
 		DHT11_trriger();
 		DHT11_DataLine_Input();
 		DHT11_dumi_read();
@@ -145,6 +146,7 @@ uint8_t DHT11_rx_Data(void)
 		if(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_DATA_RIN))
 		{
 			rx_data |= 1;
+			// 비트 하나만 1로 바꿔주기 위해 00000000000000000000000000000001 값과 OR비트 연산
 		}
 		while( 1 == HAL_GPIO_ReadPin(DHT11_PORT, DHT11_DATA_RIN) );
 	}

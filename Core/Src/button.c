@@ -32,7 +32,7 @@ void lcd_display_mode_select(void)
 // 완전히 눌렀다 떼면 BUTTON_RELEASE(1) 을 return
 int get_button(GPIO_TypeDef *GPIO, uint16_t GPIO_PIN, uint8_t button_number)
 {
-	unsigned char curr_state;
+	unsigned char curr_state; // unsigned char로 선언함으로써, BUTTON_PRESS 또는 BUTTON_RELEASE와 같은 논리적 상태의 의미를 내포
 
 	curr_state=HAL_GPIO_ReadPin(GPIO, GPIO_PIN);  // 0, 1
 	// 버튼이 눌려졌으나 처음 상태
