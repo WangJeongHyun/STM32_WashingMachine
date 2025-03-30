@@ -1,23 +1,26 @@
-![image](https://github.com/user-attachments/assets/428aed66-f78c-438a-93ad-875fb8eb5a4c)# [STM32] 세탁기 구현
+![image](https://github.com/user-attachments/assets/428aed66-f78c-438a-93ad-875fb8eb5a4c)
 
+# [STM32] 세탁기 구현
+---------------------------------------
 ## 프로젝트 소개
 
-**1. 수행기간 : 2023. 09.13 ~ 2023. 10.13 **
+*1. 수행기간 : 2023. 09.13 ~ 2023. 10.13*
 
-**2. 수행목표 : NonOS 상태에서 타이머를 활용한 동시성 확보 **
+*2. 수행목표 : NonOS 상태에서 타이머를 활용한 동시성 확보*
   
-**3. 개발보드 : STM32(STM32F429ZI)  **
+*3. 개발보드 : STM32(STM32F429ZI)*
 
-**4. 개발언어 : C  **
+*4. 개발언어 : C*
 
-**5. Tools n Peripheral
+*5. Tools n Peripheral*
 - GPIO (LED)
 - Interrupt (Button, 초음파센서)
 - One-wire 통신 (온습도 센서)
 - I2C (LCD)
 - PWM 제어 (모터 드라이버, Buzzer)
 - PWM을 활용하여 밝기 조절 (FND)
-
+  
+---------------------------------------
 ## 동작 사양
 ![image](https://github.com/user-attachments/assets/5ffc61c5-bc7f-4926-956b-727b04119ef4)
 
@@ -38,13 +41,14 @@ Mode Select이 완료 되면, Mode에 대한 시간 설정
 Emergency Stop 버튼을 지원하여 동작 중 긴급정지 가능
 Motor Driver를 통한 DC Motor 제어로 Mode 별 동작 알고리즘 분기
 모든 Process가 종료 되면 Buzzer를 통해 세탁 종료 알림
-
+---------------------------------------
 
 ## 시현 영상
 [![](https://img.youtube.com/vi/lyeTFwmIuKs/0.jpg)](https://youtu.be/lyeTFwmIuKs?t=0s)
 
 <br>
 
+---------------------------------------
 
 ## 설계 과정
 ### 데이터 시트 기반 Clock Configure
@@ -63,6 +67,7 @@ Motor Driver를 통한 DC Motor 제어로 Mode 별 동작 알고리즘 분기
 
 <br>
 
+---------------------------------------
 
 ## 검증
 ### 스코프와 로직분석기를 통한 데이터 검증
