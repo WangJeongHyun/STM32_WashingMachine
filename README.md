@@ -20,8 +20,8 @@
   
 ---------------------------------------
 ## 동작 사양
-![image](https://github.com/user-attachments/assets/5ffc61c5-bc7f-4926-956b-727b04119ef4)
-<img src="https://github.com/user-attachments/assets/5ffc61c5-bc7f-4926-956b-727b04119ef4 width="200" height="400"/>
+<img src="https://github.com/user-attachments/assets/5ffc61c5-bc7f-4926-956b-727b04119ef4" width="400">
+
 
 ![image](https://github.com/user-attachments/assets/14bf5e6b-7f0f-4d87-bd5e-8fb0e26d08db)
 
