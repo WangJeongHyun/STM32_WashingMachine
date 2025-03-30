@@ -1,18 +1,16 @@
-![image](https://github.com/user-attachments/assets/428aed66-f78c-438a-93ad-875fb8eb5a4c)
-
 # [STM32] 세탁기 구현
 ---------------------------------------
 ## 프로젝트 소개
 
-*1. 수행기간 : 2023. 09.13 ~ 2023. 10.13*
+**1. 수행기간 : 2023. 09.13 ~ 2023. 10.13**
 
-*2. 수행목표 : NonOS 상태에서 타이머를 활용한 동시성 확보*
+**2. 수행목표 : NonOS 상태에서 타이머를 활용한 동시성 확보**
   
-*3. 개발보드 : STM32(STM32F429ZI)*
+**3. 개발보드 : STM32(STM32F429ZI)**
 
-*4. 개발언어 : C*
+**4. 개발언어 : C**
 
-*5. Tools n Peripheral*
+**5. Tools n Peripheral**
 - GPIO (LED)
 - Interrupt (Button, 초음파센서)
 - One-wire 통신 (온습도 센서)
@@ -23,6 +21,7 @@
 ---------------------------------------
 ## 동작 사양
 ![image](https://github.com/user-attachments/assets/5ffc61c5-bc7f-4926-956b-727b04119ef4)
+<img src="https://github.com/user-attachments/assets/5ffc61c5-bc7f-4926-956b-727b04119ef4 width="200" height="400"/>
 
 ![image](https://github.com/user-attachments/assets/14bf5e6b-7f0f-4d87-bd5e-8fb0e26d08db)
 
